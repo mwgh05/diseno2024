@@ -40,7 +40,7 @@ A su vez, se pretende incluir un sistema de monitoreo de practica para los dispo
 
 ## Diagrama de Arquitectura
 
-![Diagrama de Arquitectura](images/DiagramaArquitectura.jpg)
+![Diagrama de Arquitectura](images/Diagrama_Proyecto.png)
 
 ## Problem Statement y Storyboard
 
