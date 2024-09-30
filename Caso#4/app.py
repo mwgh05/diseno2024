@@ -53,13 +53,20 @@ def get_registros_poolsize():
 
 @app.route('/get_registros_cache', methods=['GET'])
 def get_registros_cache():
+    
+    # Verificar si los datos estan en la cache
     cached_data = redis_cliente.get('registros_cache')
     if cached_data:
         return json_util.dumps({"data": json_util.loads(cached_data), "source": "cache"}), 200
     
-    # Si no hay datos en cache, se obtienen de la base de datos
+    # Traer de base de datos
     total = list(collection_pool.find())
     total_count = len(total)
+    
+    # En caso de no encontrar nada devolver 0 registros y no guardar en cache
+    if total_count == 0:
+        return json_util.dumps({"data": {"total_registros": 0, "registros_devueltos": 0, "data": []}, "source": "database"}), 200
+    
     percentage_35 = int(total_count * 0.35)
     resultado = random.sample(total, percentage_35)
     
@@ -69,10 +76,10 @@ def get_registros_cache():
         "data": resultado
     }
     
-    # Se guarda en cache
+    # Poner el resultado en cache
     redis_cliente.set('registros_cache', json_util.dumps(response), ex=60)
     
     return json_util.dumps(response), 200
-    
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
