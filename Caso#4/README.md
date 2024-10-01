@@ -3,13 +3,13 @@
 ## Resultados de Monitoreo
 
 |               | CPU | Memoria |
-|...............|.....|.........|
+| ------------- | -----: | :--------: |
 | Mongo DB      | 0.83% | 136.8MB |
 | Redis         | 0.31% | 19.55MB |
 | Backend API   | 0.34% | 72.38MB |
 
 |                         | Tiempo promedio de respuesta |
-|.........................|..............................| 
+| ----------------------- | ---------------------------- | 
 | /get_registros          | 11932 milliseconds |
 | /get_registros_poolsize | 13262 milliseconds |
 | /get_registros_cache    | 9924 milliseconds |
