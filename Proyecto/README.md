@@ -68,7 +68,6 @@ What are the performance benchmarks for critical operations?
 How should the system handle increased load or data volume over time?
 - Se deben aplicar estategias de escalamiento horizontal para lograr adaptarse al crecimiento del sistema, ya sea con la base de datos aplicando sharding con MongoDB o aplicarlas para componentes como Azure Service Bus y Azure Computer Vision para que manejen un mayor volumen de aviso de eventos y procesamiento de imágenes respectivamente.
 
-
 Are there any specific scalability requirements for different components of the system?
 - Principalemtente solo para la base de MongoDB, que se espera que se escale el compoenente cuando se supere una cantidad de almacenamiento establecido como 1TB por medio de shardign.
 
