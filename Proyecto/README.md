@@ -47,3 +47,48 @@ A su vez, se pretende incluir un sistema de monitoreo de practica para los dispo
 Crear un registro preciso y confiable.
 
 ![Storyboard](images/Storyboard.png)
+
+## Requerimientos No Funcionales
+
+
+**Compliance**
+
+What legal and regulatory requirements must the system comply with?
+
+- Debe cumplir con las normativas de protección de datos personales ya que contiene información como el correo electrónico y métodos de pago (en caso de que se realice la función). También debe seguir las regulaciones específicas del sector de laboratorios e investigar que tanto varían entre cada país en el que va a estar disponible la aplicación.
+
+Are there industry-specific standards that need to be followed?
+
+- El sistema debe seguir estándares de calidad y seguridad específicos de la industria de laboratorios. Además se debe tomar en cuenta las buenas prácticas de laboratorio.
+
+**Extensibility**
+
+How should the system be designed to accommodate future enhancements?
+
+- Se va a utilizar el modelo MVC y el principio de atomic design. El atomic design permite agregar funcionalidades nuevas que se adaptan a el producto grande ya existente, mientras que MVC permite manejar por separado la interfaz, los servicios y los datos, facilitando modificaciones en cada capa.
+
+Are there specific areas where extensibility is critical?
+
+- En el área de monitoreo se debe poder integrar con nuevos dispositivos de laboratorio y agregar nuevos procedimientos y materiales.
+
+**Localization**
+
+What are the requirements for supporting multiple languages and regions?
+
+- El sistema debe poder soportar varios idiomas por medio de internacionalización y localización. Se deberá traducir la interfaz de usuario, mensajes de error, alertas, documentación, etc. Además, debe poder manejar diferentes horarios y monedas.
+
+How should the system handle different date, time, and currency formats?
+
+- El sistema deberá utilizar bibliotecas de internacionalización que permitan configurar formatos de fecha, hora y moneda según la región del usuario. Deberá convertir y mostrar datos en el formato adecuado según la región del usuario.
+
+**Documentation**
+
+What documentation is required for users, administrators, and developers?
+
+- Usuarios: Manual de usuario detallado que explique cómo utilizar el sistema.
+- Administradores: Documentación sobre la configuración y mantenimiento del sistema.
+- Desarrolladores: Documentación sobre la arquitectura del sistema, APIs y otra información para el desarrollo.
+
+How should the documentation be maintained and updated?
+
+- La documentación se mantendrá en GitHub y se actualizará regularmente. Cada modificación se documentará, cuando sea necesario, y se subirá al repositorio que estará disponible para usuarios y desarrolladores.
