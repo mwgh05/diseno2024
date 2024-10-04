@@ -51,6 +51,7 @@ Crear un registro preciso y confiable.
 ## Requerimientos No Funcionales
 
 **Performance**
+
 What are the expected response times for different functions under normal and peak load conditions?
 - Funciones de Registro de Bitacotras: nomral 200ms hasta 500ms, critico 700ms hasta 1,5s
 - Funciones de Monitoreo: nomral 500ms hasta 1,5s, critico 1,5s hasta 2,5s
@@ -65,6 +66,7 @@ What are the performance benchmarks for critical operations?
 - La generación de pdfs se espera un rendimiento de un archivo cada 1,5 segundos hasta 2,5 o 3 segundos.
 
 **Scalability**
+
 How should the system handle increased load or data volume over time?
 - Se deben aplicar estategias de escalamiento horizontal para lograr adaptarse al crecimiento del sistema, ya sea con la base de datos aplicando sharding con MongoDB o aplicarlas para componentes como Azure Service Bus y Azure Computer Vision para que manejen un mayor volumen de aviso de eventos y procesamiento de imágenes respectivamente.
 
@@ -72,6 +74,7 @@ Are there any specific scalability requirements for different components of the 
 - Principalemtente solo para la base de MongoDB, que se espera que se escale el compoenente cuando se supere una cantidad de almacenamiento establecido como 1TB por medio de shardign.
 
 **Reliability**
+
 What is the acceptable downtime for the system?
 - se espera un tiempo máximo de 6 hora por mes de inactividad.
 
@@ -82,6 +85,7 @@ What are the backup and recovery procedures?
 - Se espera implementar un respaldo automático de datos en MongoDB Atlas que se encuentren configurados con una retención de 30 días y una recuperación de datos cada 15 minutos, todo esto complementado con pruebas de respaldo periódicas que aseguren el funcionamiento de tales procesos.
 
 **Availability**
+
 What are the uptime requirements for the system?
 se espera un SLA del 95% de los componentes principales, como lo son MongoDB, Azure Functions y Azure Service Bus, que son indispensables para el funcionamiento del sistema.
 
