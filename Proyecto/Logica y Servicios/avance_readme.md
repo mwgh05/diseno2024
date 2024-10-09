@@ -1,7 +1,9 @@
 # Avance de clase - Andrés
 
 **Componentes planeados**
+
 Para una representación de los componentes a gran escala se plantaron los siguientes elementos
+
 - Controllers Layer
   
     En este componente podrían ir archivos como LabProcedureController, UserController y NotificationController para manejar las principales solicitudes
