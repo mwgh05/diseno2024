@@ -11,4 +11,6 @@ Para una representación de los componentes a gran escala se plantaron los sigui
 **Prototipo Propuesto**
 Se encontraron diferentes ejemplos pero se sugiere el siguiente para la adaptación del siguiente ejemlpo encontrado en: https://miro.com/blog/mapping-architecture-diagrams/
 
+![ejempo_diagrama](images/ejemplo_diagrama.png)
+
 
