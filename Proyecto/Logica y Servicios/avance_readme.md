@@ -12,7 +12,7 @@ Para una representación de los componentes a gran escala se plantaron los sigui
 
 - Repositories Layer
   
-      Para manejar procedimientos de almacenamiento de datos, donde se podrían implmentar archivos como UserRepository, LabProcedureRepository y MaterialRepository para trabajar las operaciones CRUD por separado que          cada servicio necesite
+    Para manejar procedimientos de almacenamiento de datos, donde se podrían implmentar archivos como UserRepository, LabProcedureRepository y MaterialRepository para trabajar las operaciones CRUD por separado
   
 - Security Middleware
   
