@@ -3,11 +3,16 @@
 **Componentes planeados**
 Para una representación de los componentes a gran escala se plantaron los siguientes elementos
 - Controllers Layer
+    en este componente podrían ir archivos como LabProcedureController, UserController y NotificationController para manejar las principales solicitudes
 - Services Layer
+    en este podría ir LabProcedureService, UserService, NotificationService y AIService para separar cada funcionalidad
 - Repositories Layer
+    para manejar procedimientos de almacenamiento de datos, donde se podrían implmentar archivos como UserRepository, LabProcedureRepository y MaterialRepository para trabajar las operaciones CRUD por separado que cada     servicio necesite
 - Security Middleware
+    manejo de autenticación y autorización de la aplicación, que podría contener AuthMiddleware para trabajar estos procesos
 - Third-Party Connectors Layer
-
+    para almacenar concecciones con APIs de terceros, con archivos como AIConnector y NotificationConnector
+    
 **Prototipo Propuesto**
 Se encontraron diferentes ejemplos pero se sugiere el siguiente para la adaptación del siguiente ejemlpo encontrado en: https://miro.com/blog/mapping-architecture-diagrams/
 
