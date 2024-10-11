@@ -24,9 +24,9 @@ Para una representación de los componentes a gran escala se plantaron los sigui
   
     Para almacenar concecciones con APIs de terceros, con archivos como AIConnector y NotificationConnector
 
--Models Layer
-  
-  Define los modelos de datos, que representan las entidades de la base de datos y su estructura.
+-  Models Layer
+
+    Define los modelos de datos, que representan las entidades de la base de datos y su estructura.
     
 **Prototipo Propuesto**
 
