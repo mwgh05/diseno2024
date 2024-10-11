@@ -32,6 +32,6 @@ Para una representación de los componentes a gran escala se plantaron los sigui
 
 Se diseño el siguente diagrama de componentes con la estructura mencionada
 
-![diagrama](ejemplo_diagrama.jpg)
+![diagrama](Protoripo_Diagrama de Componentes.png)
 
 
