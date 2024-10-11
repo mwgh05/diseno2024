@@ -32,6 +32,6 @@ Para una representación de los componentes a gran escala se plantaron los sigui
 
 Se diseño el siguente diagrama de componentes con la estructura mencionada
 
-![diagrama](Proyecto/Logica y Servicios/Prototipo_Diagrama_de_Componentes.png
+![diagrama](Prototipo_Diagrama_de_Componentes.png)
 
 
