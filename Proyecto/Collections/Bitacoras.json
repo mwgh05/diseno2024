@@ -5,11 +5,9 @@
     "fecha_inicio": "Date-Time",
     "fecha_final": "Date-Time",
     "pasos_completados": [
-      "step_01",
-      "step_02"
+      "step_01"
     ],
     "materiales_utilizados": [
-      "material_01",
-      "material_02"
+      "material_01"
     ]
 }
