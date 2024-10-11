@@ -1,0 +1,31 @@
+{
+    "id": "00001",
+    "numero": "EX-2024-0001",
+    "usuario": "usuario_001",
+    "nombre": "Prueba de reacción química",
+    "steps": [
+      {
+        "id": "step_01",
+        "titulo": "Preparar los reactivos",
+        "descripcion": "Mezclar ácido y base en proporciones iguales"
+      },
+      {
+        "id": "step_02",
+        "titulo": "Observar la reacción",
+        "descripcion": "Verificar los cambios de color"
+      }
+    ],
+    "materiales": [
+      {
+        "id": "material_01",
+        "nombre": "Ácido",
+        "descripcion": "Ácido sulfúrico H2SO4"
+      },
+      {
+        "id": "material_02",
+        "nombre": "Base",
+        "descripcion": "Hidróxido de sodio NaOH"
+      }
+    ],
+    "fechaCreacion": "2023-10-01T09:00:00Z"
+  }
