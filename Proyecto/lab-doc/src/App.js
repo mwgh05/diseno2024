@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import ExperimentForm from './components/ExperimentForm';
+import './App.css';
+import logo from './labdoc.png';
 /*
 import Recording from './components/Recording';
 import AIQuestions from './components/AIQuestions';
@@ -26,12 +28,19 @@ function App() {
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/experiment-form" element={<ExperimentForm />} />
-      </Routes>
-    </Router>
+    <div className="app-container diagonal-split">
+      <div className="sidebar">
+            <img src={logo} className="App-logo" alt="logo" />
+      </div>
+      <div className="content">
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/experiment-form" element={<ExperimentForm />} />
+          </Routes>
+        </Router>
+      </div>           
+    </div>
   );
 }
 
