@@ -23,11 +23,15 @@ Para una representación de los componentes a gran escala se plantaron los sigui
 - Third-Party Connectors Layer
   
     Para almacenar concecciones con APIs de terceros, con archivos como AIConnector y NotificationConnector
+
+-  Models Layer
+
+    Define los modelos de datos, que representan las entidades de la base de datos y su estructura.
     
 **Prototipo Propuesto**
 
-Se encontraron diferentes ejemplos pero se sugiere el siguiente para la adaptación del siguiente ejemlpo encontrado en: https://miro.com/blog/mapping-architecture-diagrams/
+Se diseño el siguente diagrama de componentes con la estructura mencionada
 
-![diagrama](ejemplo_diagrama.jpg)
+![diagrama](Prototipo_Diagrama_de_Componentes.png)
 
 
