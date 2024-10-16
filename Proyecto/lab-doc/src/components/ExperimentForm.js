@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './styles/ExperimentForm.css';
 
 const ExperimentForm = ({ onSubmit }) => {
@@ -17,26 +18,30 @@ const ExperimentForm = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSubmit(experimentData);
+    //onSubmit(experimentData);
+    navigate('/recording');
+  };
+
+  const navigate = useNavigate();
+
+  const goToExperiment = () => {
+    navigate('/recording');
   };
 
   return (
     <div className="experiment-form">
-      <h2>Enter Experiment Details</h2>
-      <form onSubmit={handleSubmit}>
-        <label>Inventory:</label>
-        <input type="text" name="inventory" value={experimentData.inventory} onChange={handleChange} />
-        
-        <label>Reagents:</label>
-        <input type="text" name="reagents" value={experimentData.reagents} onChange={handleChange} />
-
-        <label>Procedure Type:</label>
-        <input type="text" name="procedureType" value={experimentData.procedureType} onChange={handleChange} />
-        
-        <button type="submit">Start Experiment</button>
-      </form>
+      <div className='content'>
+        <h2>Enter Procedure</h2>
+        <form onSubmit={handleSubmit}>
+          <li><label>Procedure Type:</label>
+          <input type="text" name="procedureType" value={experimentData.procedureType} onChange={handleChange} /></li>
+          
+          <button type='submit'>Start Experiment</button>
+        </form>
+      </div>
     </div>
   );
 };
 
 export default ExperimentForm;
+//type="submit"
