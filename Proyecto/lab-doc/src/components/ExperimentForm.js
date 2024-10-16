@@ -23,11 +23,11 @@ const ExperimentForm = ({ onSubmit }) => {
   };
 
   const navigate = useNavigate();
-
+/*
   const goToExperiment = () => {
     navigate('/recording');
   };
-
+*/
   return (
     <div className="experiment-form">
       <div className='content'>
