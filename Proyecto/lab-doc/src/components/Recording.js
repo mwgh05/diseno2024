@@ -39,7 +39,7 @@ const Recording = ({ onStop }) => {
     if (streamRef.current) {
       streamRef.current.getTracks().forEach(track => track.stop());
     }
-    onStop();
+   // onStop();
   };
 
   const pauseRecording = () => {
@@ -51,7 +51,7 @@ const Recording = ({ onStop }) => {
     <div className="recording">
       <h2>{isRecording ? 'Recording...' : isPaused ? 'Recording Paused' : 'Ready to Record'}</h2>
       <video ref={videoRef} autoPlay playsInline className="camera-view"></video>
-      {!isRecording && !isPaused && <button onClick={startRecording}>Start Recording</button>}
+      {!isRecording  && <button onClick={startRecording}>Start Recording</button>}
       {isRecording && <button onClick={pauseRecording}>Pause Recording</button>}
       {(isRecording || isPaused) && <button onClick={stopRecording}>Finish Recording</button>}
     </div>
