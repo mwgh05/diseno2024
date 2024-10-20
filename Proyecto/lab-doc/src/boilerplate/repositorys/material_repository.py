@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from models import material
 
 class material_repository:
     def __init__(self, db_client):
