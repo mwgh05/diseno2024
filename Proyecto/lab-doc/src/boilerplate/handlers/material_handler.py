@@ -1,3 +1,5 @@
+from controllers import material_controller
+
 class MaterialHandler:
     def __init__(self, material_controller):
         self.material_controller = material_controller
