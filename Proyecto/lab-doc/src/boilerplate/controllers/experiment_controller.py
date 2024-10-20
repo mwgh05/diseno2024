@@ -1,5 +1,6 @@
 from repositorys import experiment_repository
-from services import *
+from services import Ai_service
+from services import notification_service
 
 class ExperimentController:
     def __init__(self, log_experiment_repository):
