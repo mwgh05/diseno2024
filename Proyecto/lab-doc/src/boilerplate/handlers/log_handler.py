@@ -1,4 +1,5 @@
 from controllers import log_controller
+from Data Transfer import log_dto
 
 class LogHandler:
     def __init__(self, log_controller):
