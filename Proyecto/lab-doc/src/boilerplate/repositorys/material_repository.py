@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-class MaterialRepository:
+class material_repository:
     def __init__(self, db_client):
         self.db = db_client['lab_database']  # Acceso a la base de datos
         self.materials = materials
