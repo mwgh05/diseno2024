@@ -16,12 +16,13 @@ const { width, height } = Dimensions.get('window');
 function App() {
   return (
     <NavigationContainer>
-      <View style={styles.appContainer}>
-        <View style={styles.sidebar}>
-          <Image source={logo} style={styles.logo} />
-        </View>
-        <View style={styles.content}>
-          
+      <View style={styles.appContainer}>    
+        
+          <View style={styles.content}>
+          <View style={styles.triangle} />
+            <View style={styles.sidebar}>
+              <Image source={logo} style={styles.logo} />
+            </View>         
             <Stack.Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
               <Stack.Screen name="Home" component={Home} />
               <Stack.Screen name="ExperimentForm" component={ExperimentForm} />
@@ -29,9 +30,8 @@ function App() {
               <Stack.Screen name="AIQuestions" component={AIQuestions} />
               <Stack.Screen name="ResolveQuestions" component={ResolveQuestions} />
               <Stack.Screen name="Documentation" component={Documentation} />
-            </Stack.Navigator>
-            <View style={[styles.triangle]} />
-          
+            </Stack.Navigator>          
+            
         </View>
       </View>
     </NavigationContainer>
@@ -41,50 +41,27 @@ function App() {
 const styles = StyleSheet.create({
   appContainer: {
     flex: 1,
-    flexDirection: 'row',
     backgroundColor: 'white',
-    justifyContent: 'center'
   },
   sidebar: {
-    height: '15%',
+    height: 100,
+    width: 100,
     justifyContent: 'center',
     alignItems: 'flex-start',
     padding: 10,
-    backgroundColor: '#f0f0f0',
+    paddingTop: 40,
+    backgroundColor: 'white',
+    zIndex: 2,
   },
   logo: {
     width: 100,
     height: 100,
   },
   content: {
-    flex: 1,
     position: 'relative',
+    width: '100%',
+    height: '100%',
     backgroundColor: 'white',
-  },
-  diagonalSplit: {
-    ...StyleSheet.absoluteFillObject,
-    zIndex: 1,
-  },
-  topLeft: {
-    width: width * 2,
-    height: height * 2,
-    backgroundColor: 'white',
-    transform: [{ rotate: '-45deg' }],
-    position: 'absolute',
-    top: -height,
-    left: -width,
-  },
-  bottomRight: {
-    width: width * 2,
-    height: height * 2,
-    backgroundColor: '#72a1cb',
-    transform: [{ rotate: '-45deg' }],
-    position: 'absolute',
-    bottom: -height,
-    right: -width,
-  },
-  navigatorContainer: {
-    flex: 1,
     zIndex: 2,
   },
   triangle: {
@@ -96,11 +73,12 @@ const styles = StyleSheet.create({
     backgroundColor: 'blue',
     borderStyle: 'solid',
     borderLeftWidth: 0,
-    borderRightWidth: Dimensions.get('window').width,
-    borderTopWidth: 100,
+    borderRightWidth: width,
+    borderTopWidth: 170,
     borderLeftColor: 'transparent',
     borderRightColor: 'transparent',
-    borderTopColor: '#fff',
+    borderTopColor: 'white',
+    zIndex: 1,
   },
 });
 

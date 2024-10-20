@@ -1,16 +1,17 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
-import { Camera } from 'expo-camera';
+import { Camera, CameraType } from 'expo-camera/legacy';
 
 const Recording = ({ navigation }) => {
   const [hasPermission, setHasPermission] = useState(null);
   const [isRecording, setIsRecording] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
+  const [type, setType] = useState(CameraType.back);
   const cameraRef = useRef(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     (async () => {
-      const { status } = await Camera.requestPermissionsAsync();
+      const { status } = await Camera.requestCameraPermissionsAsync();
       setHasPermission(status === 'granted');
     })();
   }, []);
@@ -30,6 +31,7 @@ const Recording = ({ navigation }) => {
       setIsRecording(false);
       setIsPaused(false);
     }
+    navigation.navigate('AIQuestions');
   };
 
   const pauseRecording = () => {
@@ -52,11 +54,13 @@ const Recording = ({ navigation }) => {
       <Camera
         ref={cameraRef}
         style={styles.preview}
-        type={Camera.Constants.Type.back}
+        type={type}
       />
-      {!isRecording && <Button title="Start Recording" onPress={startRecording} />}
-      {isRecording && <Button title="Pause Recording" onPress={pauseRecording} />}
-      {(isRecording || isPaused) && <Button title="Finish Recording" onPress={stopRecording} />}
+      <View style={styles.buttonContainer}>
+        {!isRecording && <Button title="Start Recording" onPress={startRecording} />}
+        {isRecording && <Button title="Pause Recording" onPress={pauseRecording} />}
+        {(isRecording || isPaused) && <Button title="Finish Recording" onPress={stopRecording} />}
+      </View>
     </View>
   );
 };
@@ -64,19 +68,27 @@ const Recording = ({ navigation }) => {
 const styles = StyleSheet.create({
   recording: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     alignItems: 'center',
+    backgroundColor: 'white',
   },
   status: {
     fontSize: 18,
     marginBottom: 10,
   },
   preview: {
-    flex: 1,
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
     alignItems: 'center',
+    width: '80%',
+    height: '60%', 
+  },
+  buttonContainer: {
+    position: 'relative',
     width: '100%',
-    height: '100%',
+    padding: 20,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    flexDirection: 'row',
   },
 });
 
