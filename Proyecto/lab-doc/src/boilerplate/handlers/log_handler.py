@@ -1,3 +1,5 @@
+from controllers import log_controller
+
 class LogHandler:
     def __init__(self, log_controller):
         self.log_controller = log_controller
