@@ -1,30 +1,26 @@
-class NotificationConnector:
-    def __init__(self, azure_notification_bus):
-        self.azure_notification_bus = azure_notification_bus  # Azure Notification Bus Client
+class Ai_connector:
+    def __init__(self, mediapipe_client):
+        self.mediapipe_client = mediapipe_client  # MediaPipe Client
 
-    def send_notification_to_service(self, user_id, message):
+    def send_video_stream(self, video_stream):
         """
-        Descripción: Envía una notificación instantánea a través del Azure Notification Bus.
+        Descripción: Envía el stream de video al servicio de MediaPipe para análisis.
         """
-        # Lógica para construir la notificación
-        notification_payload = {
-            "user_id": user_id,
-            "message": message
-        }
-        
-        # Se envía la notificación al servicio remoto (Azure Notification Bus)
-        self.azure_notification_bus.send_message(notification_payload)
+        # Lógica para enviar el video a MediaPipe
+        response = self.mediapipe_client.process_video(video_stream)
+        return response
 
-    def schedule_notification_to_service(self, user_id, message, datetime):
+    def receive_ai_results(self):
         """
-        Descripción: Programa una notificación para una hora y fecha específicas a través de Azure Notification Bus.
+        Descripción: Recibe los resultados procesados por MediaPipe.
         """
-        # Lógica para construir la notificación programada
-        notification_payload = {
-            "user_id": user_id,
-            "message": message,
-            "datetime": datetime
-        }
+        # Obtener los resultados del análisis
+        ai_results = self.mediapipe_client.get_results()
+        return ai_results
 
-        # Programar la notificación en Azure Notification Bus
-        self.azure_notification_bus.schedule_message(notification_payload, datetime)
+    def train_ai_model(self, training_data):
+        """
+        Descripción: Entrena el modelo de IA en MediaPipe con los datos de entrenamiento proporcionados.
+        """
+        # Lógica para entrenar el modelo en MediaPipe
+        self.mediapipe_client.train_model(training_data)
