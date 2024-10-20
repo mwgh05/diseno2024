@@ -1,4 +1,6 @@
 from pymongo import MongoClient
+from models import log
+from models import experiment
 
 class log_experiment_repository:
     def __init__(self, db_client):
