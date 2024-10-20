@@ -245,4 +245,4 @@ En esta pantalla se mostrará la bitácora del experimento.
 
 ## Boilerplate
 
-[Link Text](app/lab-doc/UI/readme.md)
+[Boilerplate](app/lab-doc/UI/readme.md)
