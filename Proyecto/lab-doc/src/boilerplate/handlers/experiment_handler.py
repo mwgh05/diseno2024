@@ -1,3 +1,5 @@
+from controllers import experiment_controller
+
 class ExperimentHandler:
     def __init__(self):
         self.experiment_controller = ExperimentController()
