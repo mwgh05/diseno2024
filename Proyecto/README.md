@@ -241,6 +241,8 @@ En esta pantalla se mostrará la bitácora del experimento.
 
 ## Diagrama de clases
 
+![Diagrama de Clases](images/clases.png)
+
 ## Boilerplate
 
 [Link Text](app/lab-doc/UI/readme.md)
