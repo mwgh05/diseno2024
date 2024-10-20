@@ -194,3 +194,53 @@ What documentation is required for users, administrators, and developers?
 How should the documentation be maintained and updated?
 
 - La documentación se mantendrá en GitHub y se actualizará regularmente. Cada modificación se documentará, cuando sea necesario, y se subirá al repositorio que estará disponible para usuarios y desarrolladores.
+
+# Diseño del Front-End
+
+## UI
+
+| Feature                           | Text input en ExperimentForm | Camera View | Boton Start Recording | Boton Finish Recording | questionContainer | Text input en ResolveQuestions | content en Documentation |
+| --------------------------------- | ---------------------------- | ----------- | --------------------- | ---------------------- | ----------------- | ----------------------------- | ------------------------ |
+| Capacidad para ingresar procedimiento | X                          |             |                       |                        |                   |                               |                          |
+| Grabar procedimiento              |                              | X           | X                     | X                      |                   |                               |                          |
+| Ver dudas de la AI                |                              |             |                       |                        | X                 |                               |                          |
+| Resolver dudas                    |                              |             |                       |                        |                   | X                             |                          |
+| Ver bitácora                      |                              |             |                       |                        |                   |                               | X                        |
+
+### Pantallas
+
+Pantalla inicial. Simplemente se le da "Start".
+
+![Main](images/Main.jpg)
+
+Se ingresa el procedimiento y se le da en "Start Experiment".
+
+![Form](images/Form.jpg)
+
+Pantalla para grabar el procedimiento.
+
+![Record](images/Record.jpg)
+
+Se puede pausar para seguir grabando después y cuando termina se le da en "Finish Recording".
+
+![Record2](images/Record2.jpg)
+
+Si la AI tiene alguna duda durante el procedimiento aparecerán aquí y cada una tendrá un botón para resolverla. Para este ejemplo se dejó un botón como prueba. Después de resolverlas se le da al botón de "Finish" que lo mandará a la última pantalla.
+
+![Questions](images/Questions.jpg)
+
+Se resuelve la duda, lo que lo manda de vuelta a la pantalla anterior por si hay otras dudas.
+
+![Resolve](images/Resolve.jpg)
+
+En esta pantalla se mostrará la bitácora del experimento. 
+
+![Documentation](images/Documentation.jpg)
+
+## Diagrama de capas
+
+## Diagrama de clases
+
+## Boilerplate
+
+[Link Text](app/lab-doc/UI/readme.md)
