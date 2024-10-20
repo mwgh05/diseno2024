@@ -1,4 +1,5 @@
 from pymongo import MongoClient
+from models import organization
 
 class OrganizationRepository:
     def __init__(self, db_client):
