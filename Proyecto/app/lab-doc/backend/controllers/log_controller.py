@@ -1,5 +1,7 @@
 from repositorys import log_repository
 from services import pdf_generator_service
+import experiment_controller
+import material_controller
 
 class LogController:
     def __init__(self, log_experiment_repository):
