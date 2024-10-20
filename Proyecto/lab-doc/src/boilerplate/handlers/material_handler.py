@@ -1,4 +1,5 @@
 from controllers import material_controller
+from Data Transfer import material_dto
 
 class MaterialHandler:
     def __init__(self, material_controller):
