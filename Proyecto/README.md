@@ -248,3 +248,64 @@ En esta pantalla se mostrará la bitácora del experimento.
 ## Boilerplate
 
 [Boilerplate](app/lab-doc/UI/readme.md)
+
+## Diseño Modelo de Datos
+
+### Modelo de Datos para Alerta
+
+![Alerta](images/Alert.png)
+
+[Ver código del modelo Alert (flask_mongoengine)](app/lab-doc/backend/models_MongoDB/alert.py)
+
+[Ver código del modelo Alert (Ejemplo json)](Stage5/Collections_Ejemplos/alert.json)
+
+### Modelo de Datos para Experimento
+
+![Experimento](images/Experiment.png)
+
+[Ver código del modelo Experiment (flask_mongoengine)](app/lab-doc/backend/models_MongoDB/experiment.py)
+
+[Ver código del modelo Experiment (Ejemplo json)](Stage5/Collections_Ejemplos/experiment.json)
+
+### Modelo de Datos para Log
+
+![Log](images/Log.png)
+
+[Ver código del modelo Log (flask_mongoengine)](app/lab-doc/backend/models_MongoDB/log.py)
+
+[Ver código del modelo Log (Ejemplo json)](Stage5/Collections_Ejemplos/log.json)
+
+### Modelo de Datos para Material
+
+![Material](images/Material.png)
+
+[Ver código del modelo Material (flask_mongoengine)](app/lab-doc/backend/models_MongoDB/material.py)
+
+[Ver código del modelo Material (Ejemplo json)](Stage5/Collections_Ejemplos/material.json)
+
+### Modelo de Datos para Organización
+
+![Organización](images/Organization.png)
+
+[Ver código del modelo Organization (flask_mongoengine)](app/lab-doc/backend/models_MongoDB/organization.py)
+
+[Ver código del modelo Organization (Ejemplo json)](Stage5/Collections_Ejemplos/organization.json)
+
+### Modelo de Datos para Paso
+
+![Paso](images/Step.png)
+
+[Ver código del modelo Step (flask_mongoengine)](app/lab-doc/backend/models_MongoDB/step.py)
+
+[Ver código del modelo Step (Ejemplo json)](Stage5/Collections_Ejemplos/step.json)
+
+### Modelo de Datos para Usuario
+
+![Usuario](images/User.png)
+
+[Ver código del modelo User (flask_mongoengine)](app/lab-doc/backend/models_MongoDB/user.py)
+
+[Ver código del modelo User (Ejemplo json)](Stage5/Collections_Ejemplos/user.json)
+
+
+
