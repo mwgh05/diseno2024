@@ -1,0 +1,7 @@
+{
+    "id": "alerta_001",
+    "experiment_id": "log_001",
+    "type": "Advertencia", 
+    "description": "Tiempo de reacción más lento de lo esperado",
+    "date": "Date-Time"
+}

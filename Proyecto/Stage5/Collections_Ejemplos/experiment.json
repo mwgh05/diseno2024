@@ -1,0 +1,30 @@
+{
+    "id": "00001",
+    "user_id": "usuario_001",
+    "name": "Prueba de reacción química",
+    "steps": [
+      {
+        "id": "step_01",
+        "titulo": "Preparar los reactivos",
+        "descripcion": "Mezclar ácido y base en proporciones iguales"
+      }
+    ],
+    "alerts":
+    [
+      {
+        "id": "alerta_001",
+        "experiment_id": "log_001",
+        "type": "Advertencia", 
+        "description": "Tiempo de reacción más lento de lo esperado",
+        "date": "Date-Time"
+    }
+    ],
+    "materials": [
+      {
+        "id": "material_01",
+        "nombre": "Ácido",
+        "descripcion": "Ácido sulfúrico H2SO4"
+      }
+    ],
+    "date": "Date-Time"
+  }

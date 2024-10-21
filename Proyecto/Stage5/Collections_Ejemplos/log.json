@@ -1,0 +1,13 @@
+{
+    "id": "log_001",
+    "experiment_id": "00001",
+    "user_id": "usuario_001",
+    "date_start": "Date-Time",
+    "date_final": "Date-Time",
+    "steps_completed": [
+      "step_01"
+    ],
+    "materials_used": [
+      "material_01"
+    ]
+}
