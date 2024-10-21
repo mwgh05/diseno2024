@@ -37,5 +37,6 @@ class Alert:
     def set_type(self, type):
         self.type = type
 
-    def set_desc
+    def set_description(self, description):
+        self.description = description
 
