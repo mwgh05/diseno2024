@@ -239,6 +239,8 @@ En esta pantalla se mostrará la bitácora del experimento.
 
 ## Diagrama de capas
 
+![Diagrama_Capas](images/Layer_Diagram.png)
+
 ## Diagrama de clases
 
 ![Diagrama de Clases](images/clases.png)
